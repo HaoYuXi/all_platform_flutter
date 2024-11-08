@@ -17,3 +17,5 @@ samples, guidance on mobile development, and a full API reference.
 ## flutter_hook
 - [flutter_hook](https://pub.dev/packages/flutter_hook)
 - https://github.com/rrousselGit/flutter_hooks/blob/master/packages/flutter_hooks/resources/translations/zh_cn/README.md
+
+flutter sdk version: 3.16.6
