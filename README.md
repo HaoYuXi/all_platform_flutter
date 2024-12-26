@@ -22,3 +22,6 @@ flutter sdk version: 3.16.6
 
 
 # fvm dart run build_runner build  -d
+
+# 可拖动排序的List
+ -ReorderableList
