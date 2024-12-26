@@ -19,3 +19,6 @@ samples, guidance on mobile development, and a full API reference.
 - https://github.com/rrousselGit/flutter_hooks/blob/master/packages/flutter_hooks/resources/translations/zh_cn/README.md
 
 flutter sdk version: 3.16.6
+
+
+# fvm dart run build_runner build  -d
