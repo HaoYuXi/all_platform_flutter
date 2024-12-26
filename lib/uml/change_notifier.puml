@@ -1,0 +1,39 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+'abstract class AbstractList
+'abstract AbstractCollection
+'interface List
+'interface Collection
+'
+'List <|-- AbstractList
+'Collection <|-- AbstractCollection
+'
+'Collection <|- List
+'AbstractCollection <|- AbstractList
+'AbstractList <|-- ArrayList
+'
+'class ArrayList {
+'Object[] elementData
+'size()
+'}
+
+InheritedProvider <|-- _CreateInheritedProvider
+
+abstract class Listenable{
+    +void addListener(Listener listener)
+    +void removeListener(Listener listener)
+}
+
+class InheritedProvider {}
+
+
+
+
+class _CreateInheritedProvider extends _Delegate{
+}
+abstract class _Delegate{
+createState()
+}
+
+@enduml
