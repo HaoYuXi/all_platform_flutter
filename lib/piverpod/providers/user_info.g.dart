@@ -6,7 +6,7 @@ part of 'user_info.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$getUserHash() => r'9614e948b319b6eb05487aa7af8f47df8c73750c';
+String _$getUserHash() => r'23ffabe78c8f5c636e112fb26c64ad5621942277';
 
 /// See also [getUser].
 @ProviderFor(getUser)
@@ -237,7 +237,7 @@ final loggedProvider = AutoDisposeAsyncNotifierProvider<Logged, bool>.internal(
 
 typedef _$Logged = AutoDisposeAsyncNotifier<bool>;
 String _$delayedAcquisitionHash() =>
-    r'21bcbeacb0a048b71b228cbe4771a8ea8d4c6da7';
+    r'7d4f8268b3a516d35c128b0e99e98313fd9a396d';
 
 /// See also [DelayedAcquisition].
 @ProviderFor(DelayedAcquisition)
@@ -253,5 +253,144 @@ final delayedAcquisitionProvider =
 );
 
 typedef _$DelayedAcquisition = AutoDisposeAsyncNotifier<int>;
+String _$keywordHash() => r'1812f1db47f056239f67ff2a1b7541b514a6352f';
+
+abstract class _$Keyword extends BuildlessAutoDisposeNotifier<String> {
+  late final String keyword;
+
+  String build(
+    String keyword,
+  );
+}
+
+/// See also [Keyword].
+@ProviderFor(Keyword)
+const keywordProvider = KeywordFamily();
+
+/// See also [Keyword].
+class KeywordFamily extends Family<String> {
+  /// See also [Keyword].
+  const KeywordFamily();
+
+  /// See also [Keyword].
+  KeywordProvider call(
+    String keyword,
+  ) {
+    return KeywordProvider(
+      keyword,
+    );
+  }
+
+  @override
+  KeywordProvider getProviderOverride(
+    covariant KeywordProvider provider,
+  ) {
+    return call(
+      provider.keyword,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'keywordProvider';
+}
+
+/// See also [Keyword].
+class KeywordProvider extends AutoDisposeNotifierProviderImpl<Keyword, String> {
+  /// See also [Keyword].
+  KeywordProvider(
+    String keyword,
+  ) : this._internal(
+          () => Keyword()..keyword = keyword,
+          from: keywordProvider,
+          name: r'keywordProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$keywordHash,
+          dependencies: KeywordFamily._dependencies,
+          allTransitiveDependencies: KeywordFamily._allTransitiveDependencies,
+          keyword: keyword,
+        );
+
+  KeywordProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.keyword,
+  }) : super.internal();
+
+  final String keyword;
+
+  @override
+  String runNotifierBuild(
+    covariant Keyword notifier,
+  ) {
+    return notifier.build(
+      keyword,
+    );
+  }
+
+  @override
+  Override overrideWith(Keyword Function() create) {
+    return ProviderOverride(
+      origin: this,
+      override: KeywordProvider._internal(
+        () => create()..keyword = keyword,
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        keyword: keyword,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeNotifierProviderElement<Keyword, String> createElement() {
+    return _KeywordProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is KeywordProvider && other.keyword == keyword;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, keyword.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+mixin KeywordRef on AutoDisposeNotifierProviderRef<String> {
+  /// The parameter `keyword` of this provider.
+  String get keyword;
+}
+
+class _KeywordProviderElement
+    extends AutoDisposeNotifierProviderElement<Keyword, String>
+    with KeywordRef {
+  _KeywordProviderElement(super.provider);
+
+  @override
+  String get keyword => (origin as KeywordProvider).keyword;
+}
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

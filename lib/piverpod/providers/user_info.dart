@@ -81,3 +81,11 @@ class DelayedAcquisition extends _$DelayedAcquisition {
     return num;
   }
 }
+
+@riverpod
+class Keyword extends _$Keyword {
+  @override
+  String build(String keyword) {
+    return keyword;
+  }
+}
